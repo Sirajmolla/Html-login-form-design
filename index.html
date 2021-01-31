@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	background-image: linear-gradient(to bottom right, rgba(255,255,255,.5), rgba(255,255,255,.6)),
+	 url('bg-pic.jpg');
+	 background-size: cover;
+	 background-repeat: no-repeat;
+}
+ul{
+	padding: 0;
+	margin: 0;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+p{
+	color: #8f8f96;
+	padding: 0;
+	margin: 0;
+}
+.text-color{
+	color: #27c7cd;
+}
+.form-container{
+	width: 450px;
+	padding: 40px 30px;
+	border-radius: 10px;
+	background: rgba(255,255,255,.9);
+	box-shadow: 0 5px 20px rgba(0,0,0,.15);
+	overflow: hidden;
+	text-align: center;
+}
+.form-container h3{
+	font-size: 30px;
+	font-weight: 600;
+}
+.or{
+	font-weight: 500;
+}
+.social-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+.social-box li{
+	margin: 0 15px;
+}
+.social-box li a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form{
+	margin-top: 20px;
+}
+.form label{
+	font-weight: 500;
+	font-size: 15px;
+	display: inline-block;
+}
+.input-container{
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+	background: #fff;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 33px;
+	padding: 15px 15px;
+}
+.input-container i{
+	width: 10%;
+	color: #27c7cd;
+	font-size: 15px;
+}
+.input-box{
+	width: 90%;
+	border: none;
+	outline: none;
+	background: transparent;
+	padding-left: 5px;
+}
+::placeholder {
+  color: rgba(0,0,0,.5);
+  opacity: 1;
+}
+.rem-box{
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+/*== checkbox-container ==*/
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border-radius: 11px;
+  background-color: #fff;
+  border: 1px solid #27c7cd;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #27c7cd;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form-btn{
+	display: block;
+	width: 160px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 10px;
+	padding: 13px 15px;
+	background: #27c7cd;
+	border: 1px solid #27c7cd;
+	color: #fff;
+	border-radius: 33px;
+	font-size: 16px;
+	cursor: pointer;
+}
+.form-btn:hover{
+	color: #000;
+}
+.forgot-text{
+	display: block;
+	margin-top: 10px;
+}
+
+/*=== responsive ===*/
+@media screen and (max-width: 600px) {
+	.form-container {
+	    width: 350px;
+	    padding: 30px 20px;
+	}
+}</style>
+</head>
+<body>
+ <div class="form-container">
+ 	<h3>SIRAJ TECH SOLUTION</h3>
+
+ 	<p>Sign in with</p>
+ 	<ul class="social-box">
+ 		<li><a href="#"><img src="search.svg" width="35" height="35"></a></li>
+ 		<li><a href="#"><img src="facebook.svg" width="35" height="35"></a></li>
+ 		<li><a href="#"><img src="twitter.svg" width="35" height="35"></a></li>
+ 	</ul>
+ 	<span class="or">OR</span>
+
+ 	<form class="form">
+ 		<div class="input-container">
+ 			<i class="far fa-envelope"></i>
+ 			<input type="email" name="email" class="input-box" placeholder="Email">
+ 		</div>
+ 		<div class="input-container">
+ 			<i class="fas fa-unlock-alt"></i>
+ 			<input type="password" name="password" class="input-box" placeholder="Password">
+ 		</div>
+ 		<div class="rem-box">
+ 			<label class="checkbox-container">Remember me
+			  <input type="checkbox">
+			  <span class="checkmark"></span>
+			</label>
+ 		</div>
+ 		<button type="submit" class="form-btn">Sign In</button>
+ 	</form>
+
+ 	<p>Don't have an account? <a href="#" class="text-color">Sign Up</a></p>
+ 	<a href="#" class="text-color forgot-text">Forgot Password?</a>
+ </div>
+</body>
+</html>
